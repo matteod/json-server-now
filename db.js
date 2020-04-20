@@ -7,7 +7,7 @@ module.exports = () => {
       {
         id: 1,
         state: "active",
-        date: Faker.date.recent(0),
+        date: Faker.date.recent(-1),
         title: Faker.lorem.words(),
         description: Faker.lorem.paragraphs(),
         image: Faker.image.imageUrl()
