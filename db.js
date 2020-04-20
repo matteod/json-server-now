@@ -56,6 +56,18 @@ module.exports = () => {
         description: Faker.lorem.paragraphs(),
         image: Faker.image.imageUrl()
       }
+    ],
+    graph_data: [
+      {
+        date: moment().subtract(1, "days").format("DD-MM-YYYY"),
+        value: "6055,0000",
+        time: "14:33"
+      },
+      {
+        date: moment().format("DD-MM-YYYY"),
+        value: "6120,0000",
+        time: "14:53"
+      }
     ]
   };
   return data;
