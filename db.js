@@ -1,6 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
 const Faker = require("faker");
-const Momenet = require("moment");
+var moment = require('moment');
 
 module.exports = () => {
   const data = {
