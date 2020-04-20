@@ -1,5 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
 const Faker = require("faker");
+const Momenet = require("moment");
 
 module.exports = () => {
   const data = {
@@ -7,7 +8,7 @@ module.exports = () => {
       {
         id: 1,
         state: "active",
-        date: Faker.date.recent(1),
+        date: moment().format("DD-MM-YYYY"),
         title: Faker.lorem.words(),
         description: Faker.lorem.paragraphs(),
         image: Faker.image.imageUrl()
@@ -15,6 +16,7 @@ module.exports = () => {
       {
         id: 2,
         state: "draft",
+        date: moment().subtract(1, "days").format("DD-MM-YYYY"),
         title: Faker.lorem.words(),
         description: Faker.lorem.paragraphs(),
         image: null
