@@ -70,13 +70,75 @@ module.exports = () => {
     ],
     graph_data: [
       {
+        date: moment().subtract(14, "days").format("YYYY-MM-DD"),
+        value: Faker.finance.amount(5500,6200),
+        time: "14:33"
+      },
+      {
+        date: moment().subtract(13, "days").format("YYYY-MM-DD"),
+        value: Faker.finance.amount(5500,6200),
+        time: "14:33"
+      },
+      {
+        date: moment().subtract(12, "days").format("YYYY-MM-DD"),
+        value: Faker.finance.amount(5500,6200),
+        time: "14:33"
+      },
+      {
+        date: moment().subtract(11, "days").format("YYYY-MM-DD"),
+        value: Faker.finance.amount(5500,6200),
+        time: "14:33"
+      },{
+        date: moment().subtract(10, "days").format("YYYY-MM-DD"),
+        value: Faker.finance.amount(5500,6200),
+        time: "14:33"
+      },{
+        date: moment().subtract(9, "days").format("YYYY-MM-DD"),
+        value: Faker.finance.amount(5500,6200),
+        time: "14:33"
+      },{
+        date: moment().subtract(8, "days").format("YYYY-MM-DD"),
+        value: Faker.finance.amount(5500,6200),
+        time: "14:33"
+      },
+      {
+        date: moment().subtract(7, "days").format("YYYY-MM-DD"),
+        value: Faker.finance.amount(5500,6200),
+        time: "14:33"
+      },
+      {
+        date: moment().subtract(6, "days").format("YYYY-MM-DD"),
+        value: Faker.finance.amount(5500,6200),
+        time: "14:33"
+      },
+      {
+        date: moment().subtract(5, "days").format("YYYY-MM-DD"),
+        value: Faker.finance.amount(5500,6200),
+        time: "14:33"
+      },
+      {
+        date: moment().subtract(4, "days").format("YYYY-MM-DD"),
+        value: Faker.finance.amount(5500,6200),
+        time: "14:33"
+      },
+      {
+        date: moment().subtract(3, "days").format("YYYY-MM-DD"),
+        value: Faker.finance.amount(5500,6200),
+        time: "14:33"
+      },
+      {
+        date: moment().subtract(2, "days").format("YYYY-MM-DD"),
+        value: Faker.finance.amount(5500,6200),
+        time: "14:33"
+      },
+      {
         date: moment().subtract(1, "days").format("YYYY-MM-DD"),
-        value: Faker.finance.amount(5500,6100),
+        value: Faker.finance.amount(5500,6200),
         time: "14:33"
       },
       {
         date: moment().format("YYYY-MM-DD"),
-        value: Faker.commerce.price(5500,6100),
+        value: Faker.commerce.price(5500,6200),
         time: "14:53"
       }
     ]
