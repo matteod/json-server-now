@@ -1,10 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 var Faker = require("faker");
 var moment = require('moment-business-days');
-
 Faker.locale = "it";
-
-var moment = require('moment-business-days');
 
 moment.updateLocale('it', {
   workingWeekdays: [1, 2, 3, 4, 5],
