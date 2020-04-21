@@ -3,7 +3,7 @@ const Faker = require("faker");
 var moment = require('moment');
 
 module.exports = () => {
-  const data = {
+  return {
     posts: [
       {
         id: 1,
@@ -57,6 +57,16 @@ module.exports = () => {
         image: Faker.image.imageUrl()
       }
     ],
+    actualValue: [
+      {
+        name: "PREZZO BASE LATTONERIA - Ultimo valore",
+        price: 5530.00,
+        date: moment().format("DD-MM-YYYY"),
+        time: "08.34",
+        lastUpdateUser: "Matteo Domenici",
+        trend: "status-ok"
+      }
+    ],
     graph_data: [
       {
         date: moment().subtract(1, "days").format("DD-MM-YYYY"),
@@ -70,5 +80,4 @@ module.exports = () => {
       }
     ]
   };
-  return data;
 };
