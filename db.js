@@ -135,11 +135,6 @@ module.exports = () => {
         date: moment().subtract(1, "days").format("YYYY-MM-DD"),
         value: Faker.finance.amount(5500,6200),
         time: "14:33"
-      },
-      {
-        date: moment().format("YYYY-MM-DD"),
-        value: Faker.commerce.price(5500,6200),
-        time: "14:53"
       }
     ]
   };
