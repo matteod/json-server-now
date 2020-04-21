@@ -71,7 +71,7 @@ module.exports = () => {
     graph_data: [
       {
         date: moment().subtract(1, "days").format("YYYY-MM-DD"),
-        value: Faker.commerce.price(5500,6100),
+        value: Faker.finance.amount(5500,6100),
         time: "14:33"
       },
       {
