@@ -61,7 +61,7 @@ module.exports = () => {
     actualValue: [
       {
         name: "PREZZO BASE LATTONERIA - Ultimo valore",
-        price: 5530.00,
+        price: Faker.finance.amount(5500,6200),
         date: moment().format("YYYY-MM-DD"),
         time: "08.34",
         lastUpdateUser: "Matteo Domenici",
