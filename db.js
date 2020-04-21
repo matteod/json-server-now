@@ -21,7 +21,7 @@ for (let i = 30; i >= 1; i --) {
 
   graphData.push({
     date: moment(currentDate, 'YYYY-MM-DD').businessSubtract(i).format('YYYY-MM-DD'),
-    value: Faker.finance.amount(5500,6200),
+    value: Faker.finance.amount(5700,6100),
     time: hours + ':' + minutes
   });
 }
