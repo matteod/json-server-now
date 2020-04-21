@@ -13,7 +13,7 @@ let graphData = [];
 
 for (let i = 30; i >= 1; i --) {
   let minutes = (Math.floor(Math.random() * (59 - 1 + 1)) + 1).toString();
-  let hours = (Math.floor(Math.random() * (59 - 1 + 1)) + 1).toString();
+  let hours = (Math.floor(Math.random() * (20 - 6 + 1)) + 6).toString();
   if (parseInt(hours) < 10)
     hours = "0" + hours;
   if (parseInt(minutes) < 10)
