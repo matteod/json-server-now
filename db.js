@@ -11,9 +11,9 @@ moment.updateLocale('it', {
 const currentDate = new Date();
 let graphData = [];
 
-for (let i = 30; i > 1; i --) {
-  graphData.pop({
-    date: moment(currentDate, 'YYYY-MM-DD').businessSubtract(i)._d,
+for (let i = 30; i >= 1; i --) {
+  graphData.push({
+    date: moment(currentDate, 'YYYY-MM-DD').businessSubtract(i).format('YYYY-MM-DD'),
     value: Faker.finance.amount(5500,6200),
     time: "14:33"
   });
