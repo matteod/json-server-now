@@ -1,7 +1,7 @@
 /* eslint-disable import/no-extraneous-dependencies */
 const Faker = require("faker");
 var moment = require('moment');
-
+faker.setLocale("it");
 module.exports = () => {
   return {
     posts: [

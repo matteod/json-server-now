@@ -1,6 +1,5 @@
 {
   "version": 2,
-  "name": "json-server-now",
   "builds": [{ "src": "index.js", "use": "@now/node-server" }],
   "routes": [
     {
