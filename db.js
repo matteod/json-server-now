@@ -34,7 +34,7 @@ let actualValue = [{
   trend: "status-ok"
 }];
 
-if (actualValue[0].price < graphData[29].value){
+if (parseFloat(actualValue[0].price) < parseFloat(graphData[29].value)){
   actualValue[0].trend = "status-error";
 }
 
