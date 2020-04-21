@@ -1,7 +1,15 @@
 /* eslint-disable import/no-extraneous-dependencies */
 var Faker = require("faker");
-var moment = require('moment');
+var moment = require('moment-business-days');
+
 Faker.locale = "it";
+
+var moment = require('moment-business-days');
+
+moment.updateLocale('it', {
+  workingWeekdays: [1, 2, 3, 4, 5],
+  prevBusinessDayLimit: 31
+});
 
 module.exports = () => {
   return {
@@ -132,7 +140,7 @@ module.exports = () => {
         time: "14:33"
       },
       {
-        date: moment().subtract(1, "days").format("YYYY-MM-DD"),
+        date: moment().format("YYYY-MM-DD").businessSubtract(1)._d,
         value: Faker.finance.amount(5500,6200),
         time: "14:33"
       }
