@@ -15,7 +15,7 @@ for (let i = 30; i >= 1; i --) {
   graphData.push({
     date: moment(currentDate, 'YYYY-MM-DD').businessSubtract(i).format('YYYY-MM-DD'),
     value: Faker.finance.amount(5500,6200),
-    time: "14:33"
+    time: (Math.floor(Math.random() * (19 - 8 + 1)) + 8).toString() + ':' + (Math.floor(Math.random() * (59 - 1 + 1)) + 1).toString()
   });
 }
 module.exports = () => {
