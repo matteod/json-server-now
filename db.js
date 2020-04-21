@@ -137,7 +137,7 @@ module.exports = () => {
         time: "14:33"
       },
       {
-        date: moment().format("YYYY-MM-DD").businessSubtract(1),
+        date: moment('2020-04-21', 'YYYY-MM-DD').businessSubtract(1)._d,
         value: Faker.finance.amount(5500,6200),
         time: "14:33"
       }
