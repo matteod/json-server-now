@@ -9,6 +9,15 @@ moment.updateLocale('it', {
 });
 
 const currentDate = new Date();
+let graphData = [];
+
+for (let i = 1; i < 31; i++) {
+  graphData.push({
+    date: moment(currentDate, 'YYYY-MM-DD').businessSubtract(i)._d.format('YYYY-MM-DD'),
+    value: Faker.finance.amount(5500,6200),
+    time: "14:33"
+  });
+}
 module.exports = () => {
   return {
     posts: [
@@ -74,74 +83,6 @@ module.exports = () => {
         trend: "status-ok"
       }
     ],
-    graph_data: [
-      {
-        date: moment().subtract(14, "days").format("YYYY-MM-DD"),
-        value: Faker.finance.amount(5500,6200),
-        time: "14:33"
-      },
-      {
-        date: moment().subtract(13, "days").format("YYYY-MM-DD"),
-        value: Faker.finance.amount(5500,6200),
-        time: "14:33"
-      },
-      {
-        date: moment().subtract(12, "days").format("YYYY-MM-DD"),
-        value: Faker.finance.amount(5500,6200),
-        time: "14:33"
-      },
-      {
-        date: moment().subtract(11, "days").format("YYYY-MM-DD"),
-        value: Faker.finance.amount(5500,6200),
-        time: "14:33"
-      },{
-        date: moment().subtract(10, "days").format("YYYY-MM-DD"),
-        value: Faker.finance.amount(5500,6200),
-        time: "14:33"
-      },{
-        date: moment().subtract(9, "days").format("YYYY-MM-DD"),
-        value: Faker.finance.amount(5500,6200),
-        time: "14:33"
-      },{
-        date: moment().subtract(8, "days").format("YYYY-MM-DD"),
-        value: Faker.finance.amount(5500,6200),
-        time: "14:33"
-      },
-      {
-        date: moment().subtract(7, "days").format("YYYY-MM-DD"),
-        value: Faker.finance.amount(5500,6200),
-        time: "14:33"
-      },
-      {
-        date: moment().subtract(6, "days").format("YYYY-MM-DD"),
-        value: Faker.finance.amount(5500,6200),
-        time: "14:33"
-      },
-      {
-        date: moment().subtract(5, "days").format("YYYY-MM-DD"),
-        value: Faker.finance.amount(5500,6200),
-        time: "14:33"
-      },
-      {
-        date: moment().subtract(4, "days").format("YYYY-MM-DD"),
-        value: Faker.finance.amount(5500,6200),
-        time: "14:33"
-      },
-      {
-        date: moment().subtract(3, "days").format("YYYY-MM-DD"),
-        value: Faker.finance.amount(5500,6200),
-        time: "14:33"
-      },
-      {
-        date: moment().subtract(2, "days").format("YYYY-MM-DD"),
-        value: Faker.finance.amount(5500,6200),
-        time: "14:33"
-      },
-      {
-        date: moment(currentDate, 'YYYY-MM-DD').businessSubtract(1)._d,
-        value: Faker.finance.amount(5500,6200),
-        time: "14:33"
-      }
-    ]
+    graph_data: graphData
   };
 };
