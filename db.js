@@ -12,10 +12,17 @@ const currentDate = new Date();
 let graphData = [];
 
 for (let i = 30; i >= 1; i --) {
+  let minutes = (Math.floor(Math.random() * (59 - 1 + 1)) + 1).toString();
+  let hours = (Math.floor(Math.random() * (59 - 1 + 1)) + 1).toString();
+  if (parseInt(hours) < 10)
+    hours = "0" + hours;
+  if (parseInt(minutes) < 10)
+    minutes = "0" + minutes;
+
   graphData.push({
     date: moment(currentDate, 'YYYY-MM-DD').businessSubtract(i).format('YYYY-MM-DD'),
     value: Faker.finance.amount(5500,6200),
-    time: (Math.floor(Math.random() * (19 - 8 + 1)) + 8).toString() + ':' + (Math.floor(Math.random() * (59 - 1 + 1)) + 1).toString()
+    time: hours + ':' + minutes
   });
 }
 module.exports = () => {
