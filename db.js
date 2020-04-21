@@ -7,8 +7,8 @@ moment.updateLocale('it', {
   workingWeekdays: [1, 2, 3, 4, 5],
   prevBusinessDayLimit: 31
 });
-let today = moment().format("YYYY-MM-DD");
 
+const currentDate = new Date();
 module.exports = () => {
   return {
     posts: [
@@ -68,7 +68,7 @@ module.exports = () => {
       {
         name: "PREZZO BASE LATTONERIA - Ultimo valore",
         price: Faker.finance.amount(5500,6200),
-        date: today,
+        date: moment(currentDate, 'YYYY-MM-DD'),
         time: "08.34",
         lastUpdateUser: "Matteo Domenici",
         trend: "status-ok"
@@ -138,7 +138,7 @@ module.exports = () => {
         time: "14:33"
       },
       {
-        date: today.businessSubtract(1),
+        date: moment(currentDate, 'YYYY-MM-DD').businessSubtract(1)._d,
         value: Faker.finance.amount(5500,6200),
         time: "14:33"
       }
