@@ -10,7 +10,6 @@ moment.updateLocale('it', {
 
 const currentDate = new Date();
 let graphData = [];
-
 for (let i = 30; i >= 1; i --) {
   let minutes = (Math.floor(Math.random() * (59 - 1 + 1)) + 1).toString();
   let hours = (Math.floor(Math.random() * (20 - 6 + 1)) + 6).toString();
@@ -25,6 +24,20 @@ for (let i = 30; i >= 1; i --) {
     time: hours + ':' + minutes
   });
 }
+
+let actualValue = [{
+  name: "PREZZO BASE LATTONERIA - Ultimo valore",
+  price: Faker.finance.amount(5500, 6200),
+  date: moment(currentDate, 'YYYY-MM-DD'),
+  time: "08.34",
+  lastUpdateUser: "Matteo Domenici",
+  trend: "status-ok"
+}];
+
+if (actualValue[0].price < graphData[29].value){
+  actualValue[0].trend = "status-error";
+}
+
 module.exports = () => {
   return {
     posts: [
@@ -80,16 +93,7 @@ module.exports = () => {
         image: Faker.image.imageUrl()
       }
     ],
-    actualValue: [
-      {
-        name: "PREZZO BASE LATTONERIA - Ultimo valore",
-        price: Faker.finance.amount(5500,6200),
-        date: moment(currentDate, 'YYYY-MM-DD'),
-        time: "08.34",
-        lastUpdateUser: "Matteo Domenici",
-        trend: "status-ok"
-      }
-    ],
+    actualValue: actualValue,
     graph_data: graphData
   };
 };
