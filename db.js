@@ -75,7 +75,7 @@ module.exports = () => {
       },
       {
         date: moment().format("YYYY-MM-DD"),
-        value: 6120.0000,
+        value: Faker.commerce.price(5500,6100),
         time: "14:53"
       }
     ]
