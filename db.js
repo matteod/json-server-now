@@ -61,7 +61,7 @@ module.exports = () => {
       {
         name: "PREZZO BASE LATTONERIA - Ultimo valore",
         price: 5530.00,
-        date: moment().format("DD-MM-YYYY"),
+        date: moment().format("YYYY-MM-DD"),
         time: "08.34",
         lastUpdateUser: "Matteo Domenici",
         trend: "status-ok"
@@ -69,13 +69,13 @@ module.exports = () => {
     ],
     graph_data: [
       {
-        date: moment().subtract(1, "days").format("DD-MM-YYYY"),
-        value: "6055,0000",
+        date: moment().subtract(1, "days").format("YYYY-MM-DD"),
+        value: 6055.0000,
         time: "14:33"
       },
       {
-        date: moment().format("DD-MM-YYYY"),
-        value: "6120,0000",
+        date: moment().format("YYYY-MM-DD"),
+        value: 6120.0000,
         time: "14:53"
       }
     ]
