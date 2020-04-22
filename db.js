@@ -11,17 +11,10 @@ moment.updateLocale('it', {
 const currentDate = new Date();
 let graphData = [];
 for (let i = 30; i >= 1; i --) {
-  let minutes = (Math.floor(Math.random() * (59 - 1 + 1)) + 1).toString();
-  let hours = (Math.floor(Math.random() * (20 - 6 + 1)) + 6).toString();
-  if (parseInt(hours) < 10)
-    hours = "0" + hours;
-  if (parseInt(minutes) < 10)
-    minutes = "0" + minutes;
-
   graphData.push({
     date: moment(currentDate, 'YYYY-MM-DD').businessSubtract(i).format('YYYY-MM-DD'),
     value: Faker.finance.amount(5700,6100),
-    time: hours + ':' + minutes
+    time: randomTime()
   });
 }
 
@@ -29,12 +22,12 @@ let actualValue = [{
   name: "PREZZO BASE LATTONERIA - Ultimo valore",
   price: Faker.finance.amount(5500, 6200),
   date: moment(currentDate, 'YYYY-MM-DD'),
-  time: "08.34",
+  time: randomTime(),
   lastUpdateUser: "Matteo Domenici",
   trend: "status-ok"
 }];
 
-if (parseFloat(actualValue[0].price) < parseFloat(graphData[29].value)){
+if (parseFloat(actualValue[0].price) < parseFloat(graphData[30].value)){
   actualValue[0].trend = "status-error";
 }
 
@@ -97,3 +90,15 @@ module.exports = () => {
     graph_data: graphData
   };
 };
+function randomTime() {
+  let minutes = (Math.floor(Math.random() * (59 - 1 + 1)) + 1).toString();
+  let hours = (Math.floor(Math.random() * (20 - 6 + 1)) + 6).toString();
+  if (parseInt(hours) < 10)
+    hours = "0" + hours;
+  if (parseInt(minutes) < 10)
+    minutes = "0" + minutes;
+
+  return hours + ':' . minutes;
+
+
+}
