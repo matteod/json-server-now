@@ -90,6 +90,7 @@ module.exports = () => {
     graph_data: graphData
   };
 };
+
 function randomTime() {
   let minutes = (Math.floor(Math.random() * (59 - 1 + 1)) + 1).toString();
   let hours = (Math.floor(Math.random() * (20 - 6 + 1)) + 6).toString();
@@ -98,7 +99,6 @@ function randomTime() {
   if (parseInt(minutes) < 10)
     minutes = "0" + minutes;
 
-  return hours + ':' . minutes;
-
+  return hours + ':' + minutes;
 
 }
