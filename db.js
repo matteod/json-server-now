@@ -10,7 +10,7 @@ moment.updateLocale('it', {
 
 const currentDate = new Date();
 let graphData = [];
-for (let i = 30; i >= 1; i --) {
+for (let i = 31; i >= 1; i --) {
   graphData.push({
     date: moment(currentDate, 'YYYY-MM-DD').businessSubtract(i).format('YYYY-MM-DD'),
     value: Faker.finance.amount(5700,6100),
