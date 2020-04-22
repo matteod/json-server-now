@@ -20,9 +20,9 @@ for (let i = 31; i >= 1; i --) {
 
 let actualValue = [{
   name: "PREZZO BASE LATTONERIA - Ultimo valore",
-  price: Faker.finance.amount(5500, 6200),
+  price: Faker.finance.amount(5700, 6200),
   date: moment(currentDate, 'YYYY-MM-DD'),
-  time: randomTime(),
+  time: randomTime(true),
   lastUpdateUser: "Matteo Domenici",
   trend: "status-ok"
 }];
@@ -91,9 +91,19 @@ module.exports = () => {
   };
 };
 
-function randomTime() {
-  let minutes = (Math.floor(Math.random() * (59 - 1 + 1)) + 1).toString();
-  let hours = (Math.floor(Math.random() * (20 - 6 + 1)) + 6).toString();
+function randomTime(now = false) {
+  let hours = '';
+  let minutes = '';
+  if (now === true) {
+    let currentHour = currentDate.getHours();
+    let currentMinutes = currentDate.getMinutes();
+    minutes = (Math.floor(Math.random() * (currentMinutes - 1 + 1)) + 1).toString();
+    hours = (Math.floor(Math.random() * (currentHour - 6 + 1)) + 6).toString();
+
+  } else {
+    minutes = (Math.floor(Math.random() * (59 - 1 + 1)) + 1).toString();
+    hours = (Math.floor(Math.random() * (20 - 6 + 1)) + 6).toString();
+  }
   if (parseInt(hours) < 10)
     hours = "0" + hours;
   if (parseInt(minutes) < 10)
