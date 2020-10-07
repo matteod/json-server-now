@@ -19,7 +19,7 @@ for (let i = 31; i >= 1; i --) {
 }
 
 let actualValue = [{
-  name: "PREZZO BASE LATTONERIA - Ultimo valore",
+  name: "Rame Cash Milano CMI - Ultimo valore",
   price: Faker.finance.amount(5700, 6200),
   date: moment(currentDate, 'YYYY-MM-DD'),
   time: randomTime(true),
