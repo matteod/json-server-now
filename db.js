@@ -13,14 +13,14 @@ let graphData = [];
 for (let i = 31; i >= 1; i --) {
   graphData.push({
     date: moment(currentDate, 'YYYY-MM-DD').businessSubtract(i).format('YYYY-MM-DD'),
-    value: Faker.finance.amount(6.500,7.050),
+    value: Faker.finance.amount(6.500, 7.050, 4),
     time: randomTime()
   });
 }
 
 let actualValue = [{
   name: "Rame Cash Milano CMI - Ultimo valore",
-  price: Faker.finance.amount(6.500, 7.050),
+  price: Faker.finance.amount(6.500, 7.050, 4),
   date: moment(currentDate, 'YYYY-MM-DD'),
   time: randomTime(true),
   lastUpdateUser: "Matteo Domenici",
