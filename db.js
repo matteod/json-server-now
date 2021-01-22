@@ -20,11 +20,58 @@ for (let i = 31; i >= 1; i --) {
 
 let actualValue = [{
   name: "Rame Cash Milano CMI - Ultimo valore",
-  price: Faker.finance.amount(6.500, 7.050, 4),
+  price: Faker.finance.amount(6.500, 7.050, 2),
   date: moment(currentDate, 'YYYY-MM-DD'),
   time: randomTime(true),
   lastUpdateUser: "Matteo Domenici",
   trend: "status-ok"
+}];
+let cuUsdValue = [{
+  "Topic": "EFCUDWZ.LME",
+  "Isin": "",
+  "Market": "",
+  "10002": "44218.4039236",
+  "10009": "Rame",
+  "10011": "Rame 3 mesi",
+  "10015": 7945.5,
+  "10019": "22/01/2021",
+  "10047": 7945.5,
+  "10049": Faker.finance.amount(7873, 7897, 2),
+  "10052": "23/02/2017",
+  "10154": "USD",
+  "20002": "09:41"
+}];
+let cuCorrective = [
+  {
+    "Topic": "ESCUDC3M.LME",
+    "Isin": "",
+    "Market": "",
+    "10002": "44218.3969907",
+    "10009": "Rame",
+    "10011": "Rame cash a 3 mesi Select",
+    "10015": -6,
+    "10019": "22/01/2021",
+    "10047": -6,
+    "10049": Faker.finance.amount(-10.50, 10.5, 2),
+    "10052": "25/11/2016",
+    "10154": "USD",
+    "20002": "11:03"
+  }
+];
+let usdEurValue = [{
+  "Topic": "EFCUDWZ.LME",
+  "Isin": "",
+  "Market": "",
+  "10002": "44218.4039236",
+  "10009": "Rame",
+  "10011": "Rame 3 mesi",
+  "10015": 7945.5,
+  "10019": "22/01/2021",
+  "10047": 7945.5,
+  "10049": Faker.finance.amount(1.2080, 1.2150, 4),
+  "10052": "23/02/2017",
+  "10154": "USD",
+  "20002": "09:41"
 }];
 
 if (parseFloat(actualValue[0].price) < parseFloat(graphData[30].value)){
