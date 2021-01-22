@@ -134,7 +134,10 @@ module.exports = () => {
       }
     ],
     actualValue: actualValue,
-    graph_data: graphData
+    graph_data: graphData,
+    usdEurValue: usdEurValue,
+    cuCorrective: cuCorrective,
+    cuUsdValue: cuUsdValue
   };
 };
 
